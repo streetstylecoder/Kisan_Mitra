@@ -13,6 +13,8 @@ import torch
 from torchvision import transforms
 from PIL import Image
 from utils.model import ResNet9
+import requests
+import shutil
 # ==============================================================================================
 
 # -------------------------LOADING THE TRAINED MODELS -----------------------------------------------
@@ -184,6 +186,10 @@ def crop_prediction():
             data = np.array([[N, P, K, temperature, humidity, ph, rainfall]])
             my_prediction = crop_recommendation_model.predict(data)
             final_prediction = my_prediction[0]
+
+            
+
+            
 
             return render_template('crop-result.html', prediction=final_prediction, title=title)
 
