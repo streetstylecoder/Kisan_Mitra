@@ -187,11 +187,11 @@ def crop_prediction():
             my_prediction = crop_recommendation_model.predict(data)
             final_prediction = my_prediction[0]
 
-            
+            imgurl="../static/images/"+final_prediction+".jpeg"
 
             
 
-            return render_template('crop-result.html', prediction=final_prediction, title=title)
+            return render_template('crop-result.html', prediction=final_prediction, title=title,imgurl=imgurl)
 
         else:
 
