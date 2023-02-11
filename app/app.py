@@ -15,11 +15,14 @@ from PIL import Image
 from utils.model import ResNet9
 import requests
 import shutil
+
 # ==============================================================================================
 
 # -------------------------LOADING THE TRAINED MODELS -----------------------------------------------
 
 # Loading plant disease classification model
+
+
 
 disease_classes = ['Apple___Apple_scab',
                    'Apple___Black_rot',
@@ -129,6 +132,7 @@ def predict_image(img, model=disease_model):
 
 
 app = Flask(__name__)
+
 
 # render home page
 
