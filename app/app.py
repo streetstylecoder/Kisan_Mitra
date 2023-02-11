@@ -177,6 +177,8 @@ def crop_prediction():
         K = int(request.form['pottasium'])
         ph = float(request.form['ph'])
         rainfall = float(request.form['rainfall'])
+        
+       
 
         # state = request.form.get("stt")
         city = request.form.get("city")
@@ -188,10 +190,40 @@ def crop_prediction():
             final_prediction = my_prediction[0]
 
             imgurl="../static/images/"+final_prediction+".jpeg"
+            crop_name = final_prediction
+            df = pd.read_csv('Data/fertilizer.csv')
+
+            nr = df[df['Crop'] == crop_name]['N'].iloc[0]
+            pr = df[df['Crop'] == crop_name]['P'].iloc[0]
+            kr = df[df['Crop'] == crop_name]['K'].iloc[0]
+
+            n = nr - N
+            p = pr - P
+            k = kr - K
+            temp = {abs(n): "N", abs(p): "P", abs(k): "K"}
+            max_value = temp[max(temp.keys())]
+            if max_value == "N":
+                if n < 0:
+                    key = 'NHigh'
+                else:
+                    key = "Nlow"
+            elif max_value == "P":
+                if p < 0:
+                    key = 'PHigh'
+                else:
+                    key = "Plow"
+            else:
+                if k < 0:
+                    key = 'KHigh'
+                else:
+                    key = "Klow"
+
+            response = Markup(str(fertilizer_dic[key]))
+            
 
             
 
-            return render_template('crop-result.html', prediction=final_prediction, title=title,imgurl=imgurl)
+            return render_template('crop-result.html', prediction=final_prediction, title=title,imgurl=imgurl,recommendation=response)
 
         else:
 
