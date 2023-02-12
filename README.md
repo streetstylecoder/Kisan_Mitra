@@ -41,5 +41,10 @@ It identifies the plant the disease it's going through and list it's causes and 
 - [Disease detection dataset](https://www.kaggle.com/vipoooool/new-plant-diseases-dataset)
 
 
-
+How to run this project in your computer 
+1.Dowload zip
+2.Extract 
+3.install all the required dependncies 
+4.run the command ```flask --app app run```
+5.The website will be live on localhost
 
