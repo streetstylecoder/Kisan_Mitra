@@ -20,7 +20,7 @@ and tada Kisan Mitra application shows the complete detailed anayslsis for that 
 Moreover the application can be used to identify and list down the disease of the plant by uploading a image of it  <br><br>
 It identifies the plant the disease it's going through and list it's causes and solution
 
-
+![image](https://s9.gifyu.com/images/mov-1.gif)
 
 <br><br>
 #Requirements of application
