@@ -40,11 +40,11 @@ It identifies the plant the disease it's going through and list it's causes and 
 - [Fertilizer suggestion dataset](https://github.com/Gladiator07/Harvestify/blob/master/Data-processed/fertilizer.csv) (custom built dataset)
 - [Disease detection dataset](https://www.kaggle.com/vipoooool/new-plant-diseases-dataset)
 
-
-How to run this project in your computer 
-1.Dowload zip
-2.Extract 
-3.install all the required dependncies 
-4.run the command ```flask --app app run```
-5.The website will be live on localhost
+<br><br>
+How to run this project in your computer <br>
+1.Dowload zip<br>
+2.Extract <br>
+3.install all the required dependncies <br>
+4.run the command ```flask --app app run```<br>
+5.The website will be live on localhost<br>
 
