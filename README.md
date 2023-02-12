@@ -21,6 +21,7 @@ Moreover the application can be used to identify and list down the disease of th
 It identifies the plant the disease it's going through and list it's causes and solution
 
 ![image](https://s9.gifyu.com/images/mov-1.gif)
+<a href="https://gifyu.com/image/Sqlgz"><img src="https://s9.gifyu.com/images/mov-1.gif" alt="mov-1.gif" border="0" /></a>
 
 <br><br>
 #Requirements of application
